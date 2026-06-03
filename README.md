@@ -109,21 +109,3 @@ npm run dev
 
 After 20 seconds, protected API calls will return expired token error. Then call refresh token endpoint from frontend or Postman.
 
-## GitHub Submission
-
-Upload this project to GitHub. Do not upload your real `.env` file. Only upload `.env.example`.
-
-Recommended commands:
-
-```bash
-git init
-git add .
-git commit -m "Complete AI-Genius JWT RBAC authentication assignment"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_LINK
-git push -u origin main
-```
-
-## Viva Explanation
-
-This project implements a secure authentication system for AI-Genius. The backend verifies user credentials using bcrypt, creates a short-lived JWT access token, and stores a long-lived refresh token in an httpOnly cookie. Protected routes use a custom middleware to verify the JWT and attach the user payload to `req.user`. RBAC is implemented using `restrictTo(...roles)`, which allows only specific roles to access premium or admin APIs.
